@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div.spinner-container {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80vw;
+                height: 80vh;
+                border-radius: 20px;
+                background: rgb(238, 229, 229);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            div.circle {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                border: 7px dashed rgb(146, 143, 143);
+                animation: mymove 2s infinite linear;
+                margin: 10px;
+            }
+
+            div.spinner-small {
+                border: 3px dashed black;
+            }
+            div.spinner-small.small-dashed {
+                border: 5px dashed black;
+            }
+            div.spinner-small.small-dotted {
+                border: 7px dotted rgb(124, 123, 123);
+            }
+            
+            div.spinner-medium {
+                height: 40px;
+                width: 40px;
+                border: 7px dashed rgb(146, 143, 143);
+            }
+
+            div.spinner-large {
+                height: 60px;
+                width: 60px;
+                border: 9px dashed rgb(122, 121, 121);
+            }
+
+            @keyframes mymove {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="spinner-container">
+            <div class="container">
+                <div class="circle spinner-small"></div>
+                <div class="circle spinner-small small-dotted"></div>
+                <div class="circle spinner-small small-dashed"></div>
+            </div>
+            <div class="container">
+                <div class="circle spinner-medium"></div>
+                <div class="circle spinner-medium"></div>
+                <div class="circle spinner-medium"></div>
+            </div>
+            <div class="container">
+                <div class="circle spinner-large"></div>
+                <div class="circle spinner-large"></div>
+                <div class="circle spinner-large"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
