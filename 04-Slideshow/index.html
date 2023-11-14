@@ -6,23 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Slideshow</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script defer src="script.js"></script>
     </head>
 
     <body>
         <div class="slider">
-            <div class="slide"><img src="images/img_lights_wide.jpg"></div>
-            <div class="slide" style="display: none;"><img src="images/img_mountains_wide.jpg"></div>
-            <div class="slide" style="display: none;"><img src="images/img_nature_wide.jpg"></div>
+            <div class="slide slide--active" data-slide='0'><img src="images/img_lights_wide.jpg"></div>
+            <div class="slide" data-slide="1"><img src="images/img_mountains_wide.jpg"></div>
+            <div class="slide" data-slide="2"><img src="images/img_nature_wide.jpg"></div>
 
             <button class="slider__btn slider__btn--left">&larr;</button>
             <button class="slider__btn slider__btn--right">&rarr;</button>
             <div class="dots">
-                <div class="dots__dot"></div>
+                <!-- <div class="dots__dot"></div>
                 <div class="dots__dot dots__dot--active"></div>
-                <div class="dots__dot"></div>
+                <div class="dots__dot"></div> -->
             </div>
         </div>
     </body>
-    
+
 </html>

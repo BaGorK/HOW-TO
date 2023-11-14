@@ -1,67 +1,75 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
-  Verdana, sans-serif;
- color: rgb(80, 80, 80);
- background-color: rgb(194, 192, 192);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  color: rgb(80, 80, 80);
+  background-color: rgb(194, 192, 192);
 }
 
 .slider {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 img {
- width: 100%;
+  width: 100%;
 }
+
+div.slide {
+  display: none;
+}
+div.slide--active {
+  display: block;
+}
+
 button.slider__btn {
- border: none;
- height: 3rem;
- width: 3rem;
- /* padding: 10px 20px; */
- font-size: 2rem;
- border-radius: 50%;
- transition: 0.5s;
- background-color: rgb(197, 197, 197);
- color: gray;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  /* padding: 10px 20px; */
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: 0.5s;
+  background-color: rgb(197, 197, 197);
+  color: gray;
 }
 button.slider__btn:hover {
- background-color: aliceblue;
- color: black;
+  background-color: aliceblue;
+  color: black;
 }
 .slider__btn--right {
- position: absolute;
- top: 40%;
- right: 0;
+  position: absolute;
+  top: 40%;
+  right: 0;
 }
 .slider__btn--left {
- position: absolute;
- top: 40%;
- left: 0;
+  position: absolute;
+  top: 40%;
+  left: 0;
 }
 
 div.dots {
- display: flex;
- justify-content: center;
- align-items: center;
- width: 20%;
- margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 1rem auto;
 }
 div.dots__dot {
- min-height: 1.5rem;
- min-width: 1.5rem;
- margin-right: 1.5rem;
- border-radius: 50%;
- background-color: rgb(161, 161, 161);
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background-color: rgb(161, 161, 161);
 }
 div.dots__dot--active {
- background-color: #e0d0d0;
- box-shadow: 0 0 10px 1px gray;
+  background-color: #e0d0d0;
+  box-shadow: 0 0 10px 1px gray;
 }
