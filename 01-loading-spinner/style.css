@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lucida Sans';
+  background-color: #696868;
+  color: #696868;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+div.container {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  border-radius: 20px;
+  background: rgb(238, 229, 229);
+  /* TO CENTER CONTENTS OF THE DIV. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* TO CENTER THE DIV ELEMENT ITSELF */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.container div.spinner-container {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+div.circle {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  border: 7px dashed rgb(146, 143, 143);
+  border-radius: 50%;
+  animation: mySpinner 1s infinite linear;
+}
+
+@keyframes mySpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div.spinner-small {
+  border: 3px dashed black;
+}
+
+div.spinner-small.small-dashed-boled {
+  border: 5px dashed black;
+}
+
+div.spinner-small.small-dotted {
+  border: 7px dotted black;
+}
+
+div.spinner-medium {
+  height: 45px;
+  width: 45px;
+  border: 7px dashed black;
+}
+
+div.spinner-large {
+  height: 60px;
+  width: 60px;
+  border: 9px dashed rgb(122, 121, 121);
+}
+
+div.spinner-solid-small {
+  border: 7px solid rgb(154, 151, 151);
+  border-top: 7px solid #363535;
+}
+
+div.spinner-solid-medium {
+  border: 8px solid rgb(154, 151, 151);
+  border-top: 8px solid #363535;
+}
+
+div.spinner-solid-large {
+  border: 9px solid rgb(154, 151, 151);
+  border-top: 9px solid #363535;
+}
+
+div.spinner-large-1 {
+  /* animation: mySpinner 1s linear infinite; */
+  border: 9px solid #d1aac1;
+  border-top: 9px solid #f30e94;
+  border-right: 9px solid #f30e94;
+}
+div.spinner-large-2 {
+  /* animation: mySpinner 1s linear infinite; */
+  border: 9px solid white;
+  border-top: 9px solid #363535;
+  border-right: 9px solid #363535;
+  border-bottom: 9px solid #363535;
+}

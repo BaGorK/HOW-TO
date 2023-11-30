@@ -28,11 +28,10 @@ overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
 
-document.addEventListener('keydown', function (e) {
-    // console.log(e.key);
-    if (e.key === 'Escape') {
-          modalWindow.classList.add("hidden");
-          overlay.classList.add("hidden");
-
-    }
-})
+document.addEventListener("keydown", function (e) {
+  // console.log(e.key);
+  if (e.key === "Escape") {
+    modalWindow.classList.add("hidden");
+    overlay.classList.add("hidden");
+  }
+});
