@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nice Dropdown</title>
+        <script defer src="./script.js"></script>
+
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+                color: gray;
+                background-color: rgb(219, 222, 224);
+            }
+
+            main.main {
+                position: relative;
+                width: 80%;
+                /* border: 1px solid red; */
+                margin: 30px auto;
+                padding: 20px;
+            }
+
+            ul.nav__links {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                display: flex;
+                justify-content: space-between;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                /* width: 30%; */
+                margin-left: 40px;
+                /* border: 1px solid rgb(0, 255, 128); */
+            }
+
+            .nav__link-anchor {
+                text-decoration: none;
+                text-align: center;
+                /* border: 1px solid red; */
+                color: gray;
+
+                font-size: 2rem;
+                margin: 0 30px;
+                padding: 5px 40px;
+            }
+
+            div.link__dropdown {
+                width: 130%;
+                position: absolute;
+                margin: 40px auto;
+                background-color: aliceblue;
+                padding: 30px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+
+                top: 120%;
+                left: 50%;
+                transform: translate(-50%, 28px);
+
+                transition: transform 1s, opacity 0.5s;
+            }
+
+            div.link__dropdown::after {
+                position: absolute;
+                content: "";
+                border-width: 25px;
+                border-style: solid;
+                border-color: transparent transparent aliceblue;
+
+                bottom: 100%;
+            }
+
+            div.link__dropdown {
+                /* display: none; */
+                opacity: 0;
+            }
+
+            .nav__link-anchor--3:hover+.link__dropdown {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+
+            /* .link__dropdown:hover {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            } */
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h2>Hoverable Dropdown</h2>
+            <p>Move the mouse over the text below to open the dropdown content.</p>
+        </header>
+
+        <main class="main">
+            <nav class="nav">
+                <!-- <span>Mouse over me</span> -->
+                <ul class="nav__links">
+                    <li class="nav__link"><a class="nav__link-anchor" href="#">content 1</a></li>
+                    <li class="nav__link"><a class="nav__link-anchor" href="#">content 2</a></li>
+                    <li class="nav__link nav__link-3">
+                        <a class="nav__link-anchor nav__link-anchor--3" href="#">content 3 </a>
+                        <div class="link__dropdown">
+                            <h2>AUTHOR: Edmealem </h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ratione sequi odit!
+                                Officia, nesciunt nam?</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div class="dropdown__content">
+                        <p>Hello World! Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text by
+                            HTTrack
+                            Web</p>
+                    </div> -->
+            </nav>
+        </main>
+    </body>
+
+</html>
